@@ -1,0 +1,16 @@
+<div class="row" *ngIf="userRole ==='admin'">
+    <div class="col-xs-12">
+      <button class="btn btn-success">New Loan</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-loan-details
+        *ngFor="let loanEl of loans"
+        [loan]="loanEl"
+        (loanSelected)="onLoanSelected(loanEl)"></app-loan-details>
+    </div>
+  </div>
+  
+  
