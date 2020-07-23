@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-4">
+          <button class="btn btn-primary" (click)="onNewLoan()">New Loan</button>
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-warning" (click)="onFindLoan()">Find Loan</button>
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-warning" (click)="onFetchAll()">Fetch All Loans</button>
+        </div>
+      </div>
+      
+      
+      
+    
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-loan-item
+        *ngFor="let loanEl of loans; let i = index"
+        [loan]="loanEl"
+        [index]="i"></app-loan-item>
+    </div>
+  </div>
+  
+  

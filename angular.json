@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "saf-loan": {
+    "saf-loan-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/saf-loan",
+            "outputPath": "dist/saf-loan-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "saf-loan:build"
+            "browserTarget": "saf-loan-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "saf-loan:build:production"
+              "browserTarget": "saf-loan-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "saf-loan:build"
+            "browserTarget": "saf-loan-app:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "saf-loan:serve"
+            "devServerTarget": "saf-loan-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "saf-loan:serve:production"
+              "devServerTarget": "saf-loan-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "saf-loan"
+  "defaultProject": "saf-loan-app"
 }
